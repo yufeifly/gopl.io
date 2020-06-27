@@ -2,9 +2,10 @@ package links
 
 import (
 	"fmt"
-	"net/http"
 	"golang.org/x/net/html"
+	"net/http"
 )
+
 // Extract makes an HTTP GET request to the specified URL, parses
 // the response as HTML, and returns the links in the HTML document.
 func Extract(url string) ([]string, error) {
