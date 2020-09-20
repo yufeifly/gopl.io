@@ -4,15 +4,14 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
-	"net/url"
 	"os"
 )
 
 func main() {
-	for _, urlv := range os.Args[1:] {
-		//resp, err := http.Get(url)
-		resp, err := http.PostForm(urlv,
-			url.Values{"item": {"socks"}, "price": {"12"}})
+	for _, url := range os.Args[1:] {
+		resp, err := http.Get(url)
+		//resp, err := http.PostForm(urlv,
+		//	url.Values{"item": {"socks"}, "price": {"12"}})
 		//http.Post()
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "fetch: %v\n", err)
@@ -21,7 +20,7 @@ func main() {
 		b, err := ioutil.ReadAll(resp.Body)
 		resp.Body.Close()
 		if err != nil {
-			fmt.Fprintf(os.Stderr, "fetch: reading %s: %v\n", urlv, err)
+			fmt.Fprintf(os.Stderr, "fetch: reading %s: %v\n", url, err)
 			os.Exit(1)
 		}
 		fmt.Printf("%s", b)

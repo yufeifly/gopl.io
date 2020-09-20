@@ -1,13 +1,13 @@
 package main
 
 import (
-    "fmt"
-    //"io/ioutil"
-    "io"
-    "net/http"
-    "os"
+	"io"
+	"log"
+	"net/http"
+	"os"
 )
 
+/*
 func main() {
     for _, url := range os.Args[1:] {
         resp, err := http.Get(url)
@@ -19,10 +19,24 @@ func main() {
         //b, err := ioutil.ReadAll(resp.Body)
         io.Copy(os.Stdout, resp.Body)
         resp.Body.Close()
-        /*if err != nil {
+        if err != nil {
             fmt.Fprintf(os.Stderr, "fetch: reading %s: %v\n", url, err)
             os.Exit(1)
         }
-        fmt.Printf("%s", b)*/
+        fmt.Printf("%s", b)
     }
+}*/
+
+func main() {
+	for _, url := range os.Args[1:] {
+		resp, err := http.Get(url)
+		if err != nil {
+			log.Fatal(err)
+			os.Exit(1)
+		}
+		_, err = io.Copy(os.Stdout, resp.Body)
+		if err != nil {
+			log.Fatal(err)
+		}
+	}
 }
