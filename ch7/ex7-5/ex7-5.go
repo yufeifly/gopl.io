@@ -40,7 +40,7 @@ func LimitReader(r io.Reader, limit int) io.Reader {
 }
 
 func main() {
-	file, err := os.Open("/home/alan/go/src/gopl.io/ch7/ex7-5/limit") // 1234567890
+	file, err := os.Open("./limit") // 1234567890
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -51,6 +51,6 @@ func main() {
 	n, err := lr.Read(buf)
 	for err == nil {
 		fmt.Println(n, string(buf)) // 5 [49 50 51 52 53 0 0 0 0 0]
-		n,err = lr.Read(buf)
+		n, err = lr.Read(buf)
 	}
 }

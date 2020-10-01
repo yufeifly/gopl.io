@@ -1,3 +1,4 @@
+// 包级变量首先初始化，然后init函数，然后运行main函数
 package main
 
 import (

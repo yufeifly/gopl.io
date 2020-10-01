@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"io"
-	"log"
 	"os"
 )
 
@@ -30,18 +29,17 @@ func CountingWriter(writer io.Writer) (io.Writer, *int) {
 }
 
 func main() {
-	f, err := os.Open("C:\\Users\\yufei\\go\\src\\github.com\\yufeifly\\gopl.io\\gopl.io\\ch7\\ex7-2\\text")
+	f, err := os.OpenFile("/home/alan/go/src/github.com/yufeifly/gopl.io/ch7/ex7-2/out", os.O_WRONLY, 0)
 	if err != nil {
-		log.Printf("open file err: %v\n", err)
+		fmt.Printf("open file err: %v\n", err)
 		os.Exit(1)
 	}
+	defer f.Close()
 	cw, _ := CountingWriter(f)
-	//fmt.Println(cw)
-	fmt.Fprintf(cw, "%s", "abc")
-
-	//fmt.Println(*counter)
-	//fmt.Println(cw)
+	fmt.Fprintf(cw, "%s", "fool")
 	cw.Write([]byte("def"))
-	//fmt.Println(*counter)
-	//fmt.Println(cw)
+	//_, err = f.Write([]byte("hello,yufeifly"))
+	//if err != nil {
+	//	fmt.Printf("write file err: %v\n", err)
+	//}
 }
