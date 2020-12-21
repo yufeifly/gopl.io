@@ -12,7 +12,7 @@ import (
 	"strings"
 	"sync"
 
-	"gopl.io/ch8/ex8-2/ftp"
+	"github.com/yufeifly/gopl.io/ch8/ex8-2/ftp"
 )
 
 var Commands = map[string]uint8{

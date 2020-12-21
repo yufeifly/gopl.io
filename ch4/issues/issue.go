@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"gopl.io/ch4/github"
+	"github.com/yufeifly/gopl.io/ch4/github"
 )
 
 func main() {

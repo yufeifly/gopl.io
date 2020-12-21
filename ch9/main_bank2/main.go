@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"gopl.io/ch9/bank2"
+	"github.com/yufeifly/gopl.io/ch9/bank2"
 	"sync"
 )
 

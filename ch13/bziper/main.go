@@ -2,7 +2,7 @@
 package main
 
 import (
-	"gopl.io/ch13/bzip"
+	"github.com/yufeifly/gopl.io/ch13/bzip"
 	"io"
 	"log"
 	"os"

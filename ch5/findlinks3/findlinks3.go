@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"gopl.io/ch5/links"
+	"github.com/yufeifly/gopl.io/ch5/links"
 	"log"
 	"os"
 )

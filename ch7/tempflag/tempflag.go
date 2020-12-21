@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"gopl.io/ch7/tempconv"
+	"github.com/yufeifly/gopl.io/ch7/tempconv"
 )
 
 // 这里会设置默认值

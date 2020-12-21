@@ -6,8 +6,8 @@ import (
 	"log"
 	"net"
 
-	"gopl.io/ch8/ex8-2/ftp"
-	server "gopl.io/ch8/ex8-2/server/ftp"
+	"github.com/yufeifly/gopl.io/ch8/ex8-2/ftp"
+	server "github.com/yufeifly/gopl.io/ch8/ex8-2/ftp"
 )
 
 func handleFunc(con net.Conn) {

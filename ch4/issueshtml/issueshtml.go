@@ -1,7 +1,7 @@
 package main
 
 import (
-	"gopl.io/ch4/github"
+	"github.com/yufeifly/gopl.io/ch4/github"
 	"html/template"
 	"log"
 	"os"

@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/yufeifly/gopl.io/gopl.io/ch2/popcount"
+	"github.com/yufeifly/gopl.io/ch2/popcount"
 )
 
 func main() {

@@ -3,7 +3,7 @@ package main
 
 import (
 	"fmt"
-	"gopl.io/ch4/github"
+	"github.com/yufeifly/gopl.io/ch4/github"
 	"log"
 	"os"
 	"time"

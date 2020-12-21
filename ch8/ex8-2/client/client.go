@@ -10,8 +10,8 @@ import (
 	"os"
 	"strings"
 
-	client "gopl.io/ch8/ex8-2/client/ftp"
-	"gopl.io/ch8/ex8-2/ftp"
+	client "github.com/yufeifly/gopl.io/ch8/ex8-2/client/ftp"
+	"github.com/yufeifly/gopl.io/ch8/ex8-2/ftp"
 )
 
 func printHelp() {
